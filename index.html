@@ -5,23 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winslow - 20 danses GRATUITES!</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
-        /* Custom styles for the background */
-        .hero-bg {
-            /* Updated background image path */
-            background-image: url('backgroundhero.webp');
-            background-size: cover;
-            /* Moved the image lower vertically */
-            background-position: center 80%; 
-            background-repeat: no-repeat;
-        }
-
         /* --- Custom Cursor --- */
-        /* Curseur par défaut pour toute la page */
         body {
             cursor: url('cursor.svg'), auto;
+            overflow-x: hidden; /* Empêche la barre de défilement horizontale pendant les animations */
         }
-        /* Curseur de survol pour les liens, boutons et éléments cliquables */
         a, button, iframe, .group, .cursor-pointer {
             cursor: url('cursor-hover.svg'), pointer;
         }
@@ -29,16 +20,27 @@
 </head>
 <body class="antialiased font-sans">
 
-    <section class="hero-bg relative min-h-screen w-full flex items-center">
+    <section class="relative min-h-screen w-full flex items-center overflow-hidden">
         
-        <div class="absolute inset-0 bg-black/10"></div>
+        <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover -z-20"
+        >
+            <source src="bannervid.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la balise vidéo.
+        </video>
 
-        <header class="absolute top-0 left-0 w-full z-20 px-8 py-8 md:px-16 md:py-12 lg:px-24 xl:px-32 flex justify-between items-center">
-            <a href="/" class="block">
+        <div class="absolute inset-0 bg-black/30 -z-10"></div>
+
+        <header class="absolute top-0 left-0 w-full z-20 px-8 py-8 md:px-16 md:py-12 lg:px-24 xl:px-32 flex justify-between items-center" data-aos="fade-down" data-aos-duration="1000">
+            <a href="/" class="block hover:scale-105 transition-transform duration-300">
                 <img src="logo.svg" alt="Winslow Logo" class="h-10 md:h-12 w-auto drop-shadow-sm">
             </a>
             
-            <a href="https://billetterie.winslowdancers.com/" class="border-2 border-white text-white hover:bg-white hover:text-black font-bold py-2 px-6 rounded transition-colors duration-300 uppercase tracking-widest text-xs md:text-sm shadow-sm backdrop-blur-sm">
+            <a href="https://billetterie.winslowdancers.com/" class="border-2 border-white text-white hover:bg-white hover:text-black font-bold py-2 px-6 rounded transition-all duration-300 uppercase tracking-widest text-xs md:text-sm shadow-sm backdrop-blur-sm hover:shadow-lg hover:-translate-y-1">
                 Billetterie
             </a>
         </header>
@@ -46,31 +48,31 @@
         <div class="relative z-10 w-full px-8 md:px-16 lg:px-24 xl:px-32">
             
             <div class="max-w-3xl mt-12 md:mt-0">
-                <p class="text-white font-bold tracking-[0.15em] text-xs md:text-sm mb-4 uppercase drop-shadow-md">
+                <p class="text-white font-bold tracking-[0.15em] text-xs md:text-sm mb-4 uppercase drop-shadow-md" data-aos="fade-up" data-aos-duration="800">
                     Attention: À tous les danceurs
                 </p>
                 
-                <h1 class="text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 drop-shadow-lg leading-tight tracking-tight">
+                <h1 class="text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 drop-shadow-lg leading-tight tracking-tight" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     20 danses GRATUITES!
                 </h1>
                 
-                <p class="text-lg md:text-xl text-white mb-10 drop-shadow-md font-medium max-w-xl">
+                <p class="text-lg md:text-xl text-white mb-10 drop-shadow-md font-medium max-w-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     Apprends 20 danses populaires avec notre guide gratuit.
                 </p>
                 
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#guide" class="inline-block text-center bg-[#F28224] hover:bg-[#e0701b] text-white font-bold py-4 px-10 rounded transition-colors duration-300 uppercase tracking-widest text-sm shadow-xl">
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <a href="#guide" class="inline-block text-center bg-[#F28224] hover:bg-[#e0701b] text-white font-bold py-4 px-10 rounded transition-all duration-300 uppercase tracking-widest text-sm shadow-xl hover:shadow-2xl hover:-translate-y-1">
                         Recevoir mon guide
                     </a>
                     
-                    <a href="#value" class="inline-block text-center bg-white hover:bg-gray-100 text-gray-900 font-bold py-4 px-10 rounded transition-colors duration-300 uppercase tracking-widest text-sm shadow-xl">
+                    <a href="#value" class="inline-block text-center bg-white hover:bg-gray-100 text-gray-900 font-bold py-4 px-10 rounded transition-all duration-300 uppercase tracking-widest text-sm shadow-xl hover:shadow-2xl hover:-translate-y-1">
                         En savoir plus
                     </a>
                 </div>
             </div>
         </div>
         
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="600">
             <a href="#value" class="text-white hover:text-[#F28224] transition-colors duration-300 flex flex-col items-center gap-2">
                 <svg class="w-8 h-8 md:w-10 md:h-10 animate-bounce drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -86,57 +88,37 @@
 
         <div class="relative z-10 px-8 md:px-16 lg:px-24 xl:px-32 mx-auto max-w-[1600px]">
             
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-10 leading-tight tracking-wide">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-10 leading-tight tracking-wide" data-aos="fade-up">
                 Pourquoi des milliers de gens choisissent les danseurs <span class="text-[#F28224]">WINSLOW?</span>
             </h2>
 
-            <div class="w-full max-w-5xl mx-auto h-[2px] bg-gradient-to-r from-transparent via-white/40 to-transparent mb-16"></div>
+            <div class="w-full max-w-5xl mx-auto h-[2px] bg-gradient-to-r from-transparent via-white/40 to-transparent mb-16" data-aos="fade-in" data-aos-delay="200"></div>
 
             <div class="flex flex-wrap justify-center gap-6 lg:gap-8 max-w-[1000px] mx-auto">
                 
-                <div class="w-[260px] md:w-[280px] group cursor-pointer">
-                    <img 
-                        src="square1.jpg" 
-                        alt="1 - Les danses les plus demandées" 
-                        class="w-full h-auto rounded-xl shadow-lg transition-all duration-500 ease-out group-hover:-translate-y-3 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-[#F28224]/30"
-                    >
+                <div class="w-[260px] md:w-[280px] group cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="square1.jpg" alt="1 - Les danses les plus demandées" class="w-full h-auto rounded-xl shadow-lg transition-all duration-500 ease-out group-hover:-translate-y-3 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-[#F28224]/30">
                 </div>
 
-                <div class="w-[260px] md:w-[280px] group cursor-pointer">
-                    <img 
-                        src="square2.jpg" 
-                        alt="2 - Des vidéos faciles à suivre" 
-                        class="w-full h-auto rounded-xl shadow-lg transition-all duration-500 ease-out group-hover:-translate-y-3 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-[#F28224]/30"
-                    >
+                <div class="w-[260px] md:w-[280px] group cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="square2.jpg" alt="2 - Des vidéos faciles à suivre" class="w-full h-auto rounded-xl shadow-lg transition-all duration-500 ease-out group-hover:-translate-y-3 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-[#F28224]/30">
                 </div>
 
-                <div class="w-[260px] md:w-[280px] group cursor-pointer">
-                    <img 
-                        src="square3.jpg" 
-                        alt="3 - Apprends de chez toi" 
-                        class="w-full h-auto rounded-xl shadow-lg transition-all duration-500 ease-out group-hover:-translate-y-3 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-[#F28224]/30"
-                    >
+                <div class="w-[260px] md:w-[280px] group cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="square3.jpg" alt="3 - Apprends de chez toi" class="w-full h-auto rounded-xl shadow-lg transition-all duration-500 ease-out group-hover:-translate-y-3 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-[#F28224]/30">
                 </div>
 
-                <div class="w-[260px] md:w-[280px] group cursor-pointer">
-                    <img 
-                        src="square4.jpg" 
-                        alt="4 - Aucune honte, juste du fun" 
-                        class="w-full h-auto rounded-xl shadow-lg transition-all duration-500 ease-out group-hover:-translate-y-3 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-[#F28224]/30"
-                    >
+                <div class="w-[260px] md:w-[280px] group cursor-pointer" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="square4.jpg" alt="4 - Aucune honte, juste du fun" class="w-full h-auto rounded-xl shadow-lg transition-all duration-500 ease-out group-hover:-translate-y-3 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-[#F28224]/30">
                 </div>
 
-                <div class="w-[260px] md:w-[280px] group cursor-pointer">
-                    <img 
-                        src="square5.jpg" 
-                        alt="5 - Une communauté incroyable" 
-                        class="w-full h-auto rounded-xl shadow-lg transition-all duration-500 ease-out group-hover:-translate-y-3 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-[#F28224]/30"
-                    >
+                <div class="w-[260px] md:w-[280px] group cursor-pointer" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="square5.jpg" alt="5 - Une communauté incroyable" class="w-full h-auto rounded-xl shadow-lg transition-all duration-500 ease-out group-hover:-translate-y-3 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-[#F28224]/30">
                 </div>
 
             </div>
 
-            <div class="w-full max-w-5xl mx-auto h-[2px] bg-gradient-to-r from-transparent via-white/40 to-transparent mt-16"></div>
+            <div class="w-full max-w-5xl mx-auto h-[2px] bg-gradient-to-r from-transparent via-white/40 to-transparent mt-16" data-aos="fade-in" data-aos-delay="600"></div>
 
         </div>
     </section>
@@ -146,13 +128,9 @@
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                 
-                <div class="relative group">
+                <div class="relative group" data-aos="fade-right" data-aos-duration="1000">
                     <div class="rounded-2xl overflow-hidden shadow-2xl relative z-10 bg-white p-2">
-                        <img 
-                            src="about.webp" 
-                            alt="L'équipe des Winslow Dancers" 
-                            class="w-full h-auto object-cover rounded-xl transition-transform duration-700 group-hover:scale-105"
-                        >
+                        <img src="about.webp" alt="L'équipe des Winslow Dancers" class="w-full h-auto object-cover rounded-xl transition-transform duration-700 group-hover:scale-105">
                     </div>
                     
                     <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-[#F28224] rounded-full -z-0 opacity-20 blur-3xl"></div>
@@ -160,7 +138,7 @@
                     <div class="absolute top-1/2 -right-12 transform -translate-y-1/2 w-24 h-48 hidden lg:block" style="background-image: radial-gradient(#F28224 2px, transparent 2px); background-size: 16px 16px; opacity: 0.3;"></div>
                 </div>
 
-                <div class="relative z-10">
+                <div class="relative z-10" data-aos="fade-left" data-aos-duration="1000">
                     <p class="text-[#F28224] font-bold tracking-[0.2em] text-sm mb-4 uppercase">
                         Notre histoire
                     </p>
@@ -181,7 +159,7 @@
                         Nous donnons des cours dans 10 régions différentes au Québec et sommes sans cesse en expansion. Notre équipe compte d'ailleurs plus de 35 instructeurs. Nous offrons de nombreuses soirées de danse intérieures et extérieures, durant l'été. Vous pouvez également nous retrouver dans des événements, des festivals, des expositions et même dans vos partys privés! Nous possédons également notre propre plateforme de formation en ligne! Embarquez avec nous dans le merveilleux monde de la danse country!
                     </p>
 
-                    <a href="https://winslowdancers.com/programmation" class="inline-flex items-center gap-2 border-2 border-[#F28224] text-[#F28224] hover:bg-[#F28224] hover:text-white font-bold py-4 px-8 rounded transition-all duration-300 uppercase tracking-widest text-sm shadow-sm">
+                    <a href="https://winslowdancers.com/programmation" class="inline-flex items-center gap-2 border-2 border-[#F28224] text-[#F28224] hover:bg-[#F28224] hover:text-white font-bold py-4 px-8 rounded transition-all duration-300 uppercase tracking-widest text-sm shadow-sm hover:-translate-y-1 hover:shadow-lg">
                         Voir la programmation
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -193,22 +171,22 @@
         </div>
     </section>
 
-    <section id="guide" class="py-20 md:py-32 bg-gray-50">
+    <section id="guide" class="py-20 md:py-32 bg-gray-50 overflow-hidden">
         <div class="px-8 md:px-16 lg:px-24 xl:px-32 mx-auto max-w-4xl text-center">
             
-            <p class="text-[#F28224] font-bold tracking-[0.2em] text-sm mb-4 uppercase">
+            <p class="text-[#F28224] font-bold tracking-[0.2em] text-sm mb-4 uppercase" data-aos="fade-up">
                 C'est le moment de danser
             </p>
             
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
                 Accède à tes 20 danses GRATUITES!
             </h2>
             
-            <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
+            <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                 Remplis le formulaire ci-dessous pour rejoindre la communauté Winslow et recevoir instantanément ton guide gratuit.
             </p>
 
-            <div class="bg-[#2B4B62] rounded-2xl shadow-2xl p-2 sm:p-4 md:p-6 border-t-4 border-[#F28224] mx-auto w-full max-w-3xl">
+            <div class="bg-[#2B4B62] rounded-2xl shadow-2xl p-2 sm:p-4 md:p-6 border-t-4 border-[#F28224] mx-auto w-full max-w-3xl" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
                 
                 <iframe
                     src="https://gohighlevel.winslow-dancers.com/widget/form/dILy2478nVmfWeUo3iPJ"
@@ -234,5 +212,15 @@
             
         </div>
     </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialisation de la librairie d'animation
+        AOS.init({
+            once: true, // L'animation ne se joue qu'une seule fois en descendant
+            offset: 100, // Déclenche l'animation un peu avant que l'élément n'apparaisse à l'écran
+            easing: 'ease-out-cubic', // Animation fluide
+        });
+    </script>
 </body>
 </html>
